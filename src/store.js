@@ -1,12 +1,8 @@
-import { createStore, combineReducers } from "redux";
+import { createStore } from "redux";
 import counterReducer  from "./counter.reducer";
 
-const appReducer = combineReducers({
-    counter: counterReducer,
-})
-
 const store = createStore(
-    appReducer,
+    counterReducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
